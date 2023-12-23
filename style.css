@@ -37,6 +37,7 @@ table {
     border-radius: 5px 5px 0 0;
     overflow: hidden;
 	text-align: center;
+	overflow-x: auto;
 }
 
 table thead tr {
@@ -78,4 +79,24 @@ img {
 td .rating {
     font-size: 1.2em;
     color: #ffd700;
+	
+/* Add media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    body, header, section {
+        margin: 0; /* Remove margin for mobile */
+        padding: 5px; /* Less padding for mobile */
+    }
+
+    h2 {
+        margin-top: 0; /* Remove top margin for h2 on mobile */
+    }
+
+    table {
+        min-width: unset; /* Remove min-width on mobile for table */
+    }
+
+    table th,
+    table td {
+        padding: 8px; /* Smaller padding for table cells on mobile */
+    }
 }
